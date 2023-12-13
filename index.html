@@ -22,13 +22,16 @@
 
 </head>
 <body>
-    <div id="app">
-        <ul>
-            <li v-for="email in emails" :key="email">
-                {{email}}
-            </li>
-        </ul>
-
+    <div id="app" class="container">
+        <div class="card" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" v-for="email in emails" :key="email">
+                    {{email}}
+                </li>
+            </ul>
+        </div>
+        <h2 v-if="emails.length >= 10">All emails have been generated 🔥</h2>
+        
     </div>
     
 
